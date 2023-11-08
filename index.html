@@ -9,7 +9,8 @@
     <canvas width="512" height="512"></canvas>
     <script type="module">
         const canvas = document.querySelector("canvas")
-
+        
+        // WebGPU init
         if (!navigator.gpu) {
             throw new Error ("WebGPU not supported on this browser.");
         }
@@ -18,6 +19,9 @@
         if (!adapter) {
             throw new Error("No appropriate GNUAdapter found.");
         }
+
+        const device = await adapter.requestAdapter();
+
     </script> 
 </body>
 </html>
