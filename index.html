@@ -9,6 +9,10 @@
     <canvas width="512" height="512"></canvas>
     <script type="module">
         const canvas = document.querySelector("canvas")
+
+        if (!navigator.gpu) {
+            throw new Error ("WebGPU not supported on this browser.");
+        }
     
     </script> 
 </body>
