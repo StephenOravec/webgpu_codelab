@@ -40,6 +40,7 @@
             colorAttachments: [{
                 view: context.getCurrentTexture().createView(),
                 loadOp: "clear",
+                clearValue: { r: 0.5, g: 0.5, b: 0.5, a: 1 },
                 storeOp: "store",
             }]
         })
